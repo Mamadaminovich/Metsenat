@@ -1,12 +1,21 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
-
-import login from "./components/login.vue"
-import dashboard from "./components/dashboard.vue"
+import {
+    createRouter,
+    createWebHashHistory
+} from "vue-router";
+import dashboard from "./components/dashboard.vue";
+import sponser from "./components/sponser.vue";
 
 export default createRouter({
     history: createWebHashHistory(),
-    routes:[
-        { path: '/login', component: login, alias: '/' },
-        { path: '/dashboard', component: dashboard },
-      ]
-});
+    routes: [
+        {
+            path: "/dashboard",
+            component: dashboard,
+        },
+        {
+            path: "/sponser",
+            component: sponser,
+            alias: '/'
+        },
+    ],
+})
